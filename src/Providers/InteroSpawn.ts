@@ -174,6 +174,7 @@ export default class InteroSpawn {
             const output = await this.executeCommandOnIntero(command);
             return new vscode.Hover({language: 'haskell', value: output});
         } catch (e) {
+            console.log(e);
             return new vscode.Hover('Type not available.');
         }
     }
